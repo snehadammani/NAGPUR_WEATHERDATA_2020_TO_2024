@@ -61,7 +61,7 @@ This visualization highlights columns where outliers commonly appear.
 
 ### 4. Rain vs No-Rain Days Analysis
 
-![Rain vs No-Rain Days](https://github.com/snehadammani/NAGPUR_WEATHERDATA_2020_TO_2024/blob/5653eba0933db3224438e5c453042281ecf78aed/Distribution%20plots%20for%20key%20weather%20variables.png?raw=true)
+![Rain vs No-Rain Days](https://github.com/snehadammani/NAGPUR_WEATHERDATA_2020_TO_2024/blob/01660c1113c034f2c14ae56068e7c78314581f73/Count%20of%20Rain%20vs%20No-Rain%20days.png)
 
 This plot provides insight into rainfall patterns in the dataset.
 
