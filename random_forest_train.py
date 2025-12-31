@@ -28,6 +28,7 @@ df['month'] = df['date'].dt.month
 df['day'] = df['date'].dt.day
 df['dayofweek'] = df['date'].dt.dayofweek
 df['weekofyear'] = df['date'].dt.isocalendar().week.astype(int)
+df = df[df['maxtemp'] < df['maxtemp'].quantile(0.99)]
 
 # -----------------------------
 # 🔥 2.1 Cyclic Encoding (NEW)
@@ -83,10 +84,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 # 5. RandomForest Model
 # -----------------------------
 rf_model = RandomForestRegressor(
-    n_estimators=300,
-    max_depth=15,
+    n_estimators=500,
+    max_depth=20,
     min_samples_split=5,
-    min_samples_leaf=2,
+    min_samples_leaf=1,
     random_state=42,
     n_jobs=-1
 )
