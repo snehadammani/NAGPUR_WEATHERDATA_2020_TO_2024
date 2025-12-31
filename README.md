@@ -36,7 +36,7 @@ Missing values were removed and the data was cleaned before analysis and modelin
 ## Exploratory Data Analysis (EDA)
 
 ### 1. Distribution of Weather Variables
-![Distribution of Weather Variables](images/Distribution%20plots%20for%20key%20weather%20variables.png)
+![Distribution of Weather Variables]https://github.com/snehadammani/NAGPUR_WEATHERDATA_2020_TO_2024/blob/e8cfdaa2bc7a63678d6dd513081c8d555f3e08c4/Distribution%20plots%20for%20key%20weather%20variables.png
 
 This plot shows the distribution of major weather parameters such as temperature, humidity, wind speed, and pressure.
 
