@@ -36,51 +36,42 @@ Missing values were removed and the data was cleaned before analysis and modelin
 ## Exploratory Data Analysis (EDA)
 
 ### 1. Distribution of Weather Variables
-![Distribution of Weather Variables]https://github.com/snehadammani/NAGPUR_WEATHERDATA_2020_TO_2024/blob/e8cfdaa2bc7a63678d6dd513081c8d555f3e08c4/Distribution%20plots%20for%20key%20weather%20variables.png
+
+![Distribution of Weather Variables](https://github.com/snehadammani/NAGPUR_WEATHERDATA_2020_TO_2024/blob/e8cfdaa2bc7a63678d6dd513081c8d555f3e08c4/Distribution%20plots%20for%20key%20weather%20variables.png?raw=true)
 
 This plot shows the distribution of major weather parameters such as temperature, humidity, wind speed, and pressure.
 
 ---
 
 ### 2. Correlation Heatmap
-![Correlation Heatmap](images/Correlation%20Heatmap%20with%20Values.png)
 
-This heatmap visualizes relationships between numerical weather variables.
+![Correlation Heatmap with Values](https://github.com/snehadammani/NAGPUR_WEATHERDATA_2020_TO_2024/blob/5653eba0933db3224438e5c453042281ecf78aed/Correlation%20Heatmap%20with%20Values.png?raw=true)
+
+The correlation heatmap visualizes the relationship between numerical weather variables.
 
 ---
 
 ### 3. Outlier Analysis
-![Outlier Analysis](images/Key%20numeric%20columns%20where%20outliers%20usually%20exist.png)
 
-This plot highlights columns where outliers are commonly present.
+![Outlier Analysis](https://github.com/snehadammani/NAGPUR_WEATHERDATA_2020_TO_2024/blob/5653eba0933db3224438e5c453042281ecf78aed/Key%20numeric%20columns%20where%20outliers%20usually%20exist.png?raw=true)
 
----
-
-### 4. Rain vs No-Rain Days
-![Rain vs No-Rain Days](images/Count%20of%20Rain%20vs%20No-Rain%20days.png)
-
-This bar chart shows the distribution of rainy and non-rainy days.
+This visualization highlights columns where outliers commonly appear.
 
 ---
 
-## Machine Learning Models
+### 4. Rain vs No-Rain Days Analysis
 
-### RandomForest Regressor
-- Used as a baseline regression model
-- Input: Date-based engineered features
-- Strength: Good generalization and stable predictions
+![Rain vs No-Rain Days](https://github.com/snehadammani/NAGPUR_WEATHERDATA_2020_TO_2024/blob/5653eba0933db3224438e5c453042281ecf78aed/Distribution%20plots%20for%20key%20weather%20variables.png?raw=true)
 
-### XGBoost Regressor
-- Boosting-based regression model
-- Strong learner but sensitive to overfitting
-- Overfitting observed due to limited input features
+This plot provides insight into rainfall patterns in the dataset.
 
 ---
 
 ## Model Comparison Visualization
-![Model Comparison](images/RF%20vs%20XGBoost%20vs%20LSTM%20–%20Max%20Temperature%20Prediction%20Comparison.png)
 
-This graph compares predictions from RandomForest, XGBoost, and LSTM models.
+![RF vs XGBoost vs LSTM – Max Temperature Prediction Comparison](https://github.com/snehadammani/NAGPUR_WEATHERDATA_2020_TO_2024/blob/5653eba0933db3224438e5c453042281ecf78aed/RF%20vs%20XGBoost%20vs%20LSTM%20%E2%80%93%20Max%20Temperature%20Prediction%20Comparison.png?raw=true)
+
+This graph compares the predicted maximum temperature from RandomForest, XGBoost, and LSTM models.
 
 ---
 
@@ -89,21 +80,17 @@ This graph compares predictions from RandomForest, XGBoost, and LSTM models.
 ### LSTM Training Approach
 - Sliding window of last 7 days
 - Predicts the next day’s weather
-- Captures temporal dependency
+- Captures temporal dependency in time-series data
 
 ### LSTM Future Prediction (2026)
-![LSTM Prediction](images/LSTM%20Weather%20Prediction%20(1%20Jan%202026%20–%207%20Jan%202026).png)
 
-This graph shows LSTM-based predictions for maximum and minimum temperature.
+![LSTM Weather Prediction](https://github.com/snehadammani/NAGPUR_WEATHERDATA_2020_TO_2024/blob/5653eba0933db3224438e5c453042281ecf78aed/LSTM%20Weather%20Prediction%20(1%20Jan%202026%20%E2%80%93%207%20Jan%202026).png?raw=true)
+
+This graph shows LSTM-based predictions for maximum and minimum temperature from 1 January 2026 to 7 January 2026.
 
 ---
 
 ## Model Performance Summary
-
-The following tables summarize the performance of all implemented models using standard evaluation metrics.  
-Lower values of MAE and RMSE indicate better performance, while higher R² values indicate better generalization.
-
----
 
 ### RandomForest Metrics
 
@@ -112,9 +99,6 @@ Lower values of MAE and RMSE indicate better performance, while higher R² value
 | MAE | 1.88 | 2.68 |
 | RMSE | 2.99 | 4.21 |
 | R² | 0.88 | 0.76 |
-
-**Observation:**  
-RandomForest shows strong generalization with the highest test R² score and relatively low error on unseen data.
 
 ---
 
@@ -126,9 +110,6 @@ RandomForest shows strong generalization with the highest test R² score and rel
 | RMSE | 2.53 | 4.73 |
 | R² | 0.92 | 0.69 |
 
-**Observation:**  
-XGBoost performs very well on training data but shows reduced performance on test data, indicating overfitting.
-
 ---
 
 ### LSTM Metrics
@@ -138,9 +119,6 @@ XGBoost performs very well on training data but shows reduced performance on tes
 | Loss (MSE) | 0.0086 | 0.0069 |
 | MAE | 0.0627 | 0.0574 |
 | R² | — | — |
-
-**Note:**  
-LSTM metrics are calculated on scaled time-series data, so direct comparison with regression RMSE values is not applicable.
 
 ---
 
@@ -154,12 +132,9 @@ LSTM metrics are calculated on scaled time-series data, so direct comparison wit
 
 ---
 
-**Overall Conclusion:**  
-RandomForest achieved the best balance between error and generalization for regression-based prediction.  
-XGBoost showed signs of overfitting.  
-LSTM demonstrated stable short-term time-series forecasting with low validation loss.
+## Conclusion
 
-
+RandomForest performs well for regression-based weather prediction, while LSTM is suitable for short-term time-series forecasting. Combining ML and DL approaches provides a comprehensive understanding of weather prediction behavior.
 
 ---
 
@@ -168,4 +143,4 @@ LSTM demonstrated stable short-term time-series forecasting with low validation 
 - Integration with real-time weather APIs
 - Longer time-series forecasting
 - Deployment as a web-based dashboard
-- Additional atmospheric parameters
+- Incorporation of additional atmospheric parameters
