@@ -37,7 +37,7 @@ Missing values were removed and the data was cleaned before analysis and modelin
 
 ### 1. Distribution of Weather Variables
 
-![Distribution plots for key weather variables](Distribution plots for key weather variables.png)
+![Distribution of Weather Variables](distribution_plots.png)
 
 This plot shows the distribution of major weather parameters such as temperature, humidity, wind speed, and pressure. It helps in understanding the range, skewness, and spread of the data before applying machine learning models.
 
