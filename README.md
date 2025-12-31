@@ -1,5 +1,5 @@
 # NAGPUR_WEATHERDATA_2020_TO_2024
-## Weather Prediction for Nagpur (2020–2026) using ML & LSTM
+## Weather Prediction for Nagpur (2026) using ML & LSTM
 
 This project focuses on analyzing historical weather data for Nagpur and predicting future weather patterns using Machine Learning and Deep Learning techniques. The goal is to compare traditional regression models with time-series forecasting models and evaluate their performance.
 
