@@ -100,17 +100,66 @@ This graph shows LSTM-based predictions for maximum and minimum temperature.
 
 ## Model Performance Summary
 
-| Model | Key Observation |
-|------|----------------|
-| RandomForest | Best generalization and highest test R² |
-| XGBoost | Overfitting observed |
-| LSTM | Stable short-term time-series forecasting |
+The following tables summarize the performance of all implemented models using standard evaluation metrics.  
+Lower values of MAE and RMSE indicate better performance, while higher R² values indicate better generalization.
 
 ---
 
-## Conclusion
+### RandomForest Metrics
 
-RandomForest performs well for regression-based prediction, while LSTM is suitable for short-term time-series forecasting.
+| Metric | Train | Test |
+|------|------|------|
+| MAE | 1.88 | 2.68 |
+| RMSE | 2.99 | 4.21 |
+| R² | 0.88 | 0.76 |
+
+**Observation:**  
+RandomForest shows strong generalization with the highest test R² score and relatively low error on unseen data.
+
+---
+
+### XGBoost Metrics
+
+| Metric | Train | Test |
+|------|------|------|
+| MAE | 1.59 | 2.96 |
+| RMSE | 2.53 | 4.73 |
+| R² | 0.92 | 0.69 |
+
+**Observation:**  
+XGBoost performs very well on training data but shows reduced performance on test data, indicating overfitting.
+
+---
+
+### LSTM Metrics
+
+| Metric | Train | Validation |
+|------|------|-----------|
+| Loss (MSE) | 0.0086 | 0.0069 |
+| MAE | 0.0627 | 0.0574 |
+| R² | — | — |
+
+**Note:**  
+LSTM metrics are calculated on scaled time-series data, so direct comparison with regression RMSE values is not applicable.
+
+---
+
+### Final Comparison Summary
+
+| Model | MAE | RMSE | R² |
+|------|------|------|----|
+| RandomForest (Test) | 2.68 | 4.21 | 0.76 |
+| XGBoost (Test) | 2.96 | 4.73 | 0.69 |
+| LSTM (Validation) | 0.0574 | — | — |
+
+---
+
+**Overall Conclusion:**  
+RandomForest achieved the best balance between error and generalization for regression-based prediction.  
+XGBoost showed signs of overfitting.  
+LSTM demonstrated stable short-term time-series forecasting with low validation loss.
+
+
 
 ---
 
